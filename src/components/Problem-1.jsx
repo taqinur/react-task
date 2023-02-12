@@ -10,7 +10,7 @@ const Problem1 = () => {
             setTaskStatus(tasks.sort((a,b)=> {
                 let statusA = a.status;
                 let statusB = b.status;
-                
+
                 if (statusA < statusB){
                     return -1;
                 }
@@ -30,7 +30,6 @@ const Problem1 = () => {
     }
 
     const [tasks, setTasks] = useState([]);
-    console.log(tasks);
 
     const handleTasks = (event) => {
         event.preventDefault();
@@ -38,6 +37,7 @@ const Problem1 = () => {
         const status = event.target.status.value;
         setTasks([...tasks, {name, status}]);
     }
+    
     const [taskStatus, setTaskStatus] = useState([]);
 
     return (
